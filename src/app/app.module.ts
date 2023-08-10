@@ -12,6 +12,11 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environment';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { ImagesService } from './services/images.service';
 
 
 @NgModule({
@@ -29,9 +34,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     FormsModule,
     MatDialogModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
   ],
   providers: [
-   
+    ImagesService
   ],
   bootstrap: [AppComponent]
 })
