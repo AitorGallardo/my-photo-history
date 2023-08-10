@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ImageDetailsComponent } from './image-details/image-details.component';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
-
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -18,17 +19,21 @@ import {MatInputModule} from '@angular/material/input';
     AppComponent,
     FileUploaderComponent,
     HomeComponent,
-    ImageDetailsComponent
+    ImageDetailsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
     FormsModule,
+    MatDialogModule,
   ],
-  providers: [],
+  providers: [
+   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
