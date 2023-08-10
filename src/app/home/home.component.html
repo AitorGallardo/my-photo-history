@@ -1,0 +1,31 @@
+<header class="flex justify-between items-center py-6">
+    <div class="left-side flex items-center basis-2/5 gap-10">
+        <div class="logo flex flex-col basis-2/5">
+            <h1 class="text-green-500">My Photo</h1>
+            <h4 class="text-green-800">History</h4>
+          </div>
+        
+        <mat-form-field class="w-full self-end">
+            <mat-label>Search an image</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Search by title, label..."
+              [(ngModel)]="inputValue"
+              (input)="onInputChange()"
+            />
+          </mat-form-field>
+    </div>
+
+
+  <button mat-button color="primary">Upload Photo</button>
+</header>
+<div class="grid grid-cols-8 gap-4">
+  <div class="bg-blue-500 h-44 w-44" *ngFor="let box of boxes"></div>
+</div>
+<!-- <div class="grid grid-cols-10 gap-4">
+    <di
+    v class="bg-blue-500 h-12 w-12"></div>
+    <div class="bg-blue-500 h-12 w-12"></div>
+    <div class="bg-blue-500 h-12 w-12"></div>
+</div> -->

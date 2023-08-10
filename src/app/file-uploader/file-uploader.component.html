@@ -1,0 +1,11 @@
+<input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+
+  <div class="background-container" (click)="clickUpload()">
+    <span class="material-icons" *ngIf="!imageSrc || !showBackgroundImage">
+        {{defaultValues.icon}}
+    </span>
+    <div  class="background-image" *ngIf="imageSrc&&showBackgroundImage" [style.background-image]="'url(' + imageSrc + ')'">
+  </div>
