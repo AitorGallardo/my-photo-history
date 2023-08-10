@@ -14,13 +14,14 @@ export class HomeComponent {
   inputValue= '';
   name = 'Angular';
   animal = 'Dog';
+  
   constructor(public dialog: MatDialog, private imagesService: ImagesService) {
     // fill boxes with 40 items
     for (let i = 0; i < 40; i++) {
       this.boxes.push(i);
     }
     // this.addData()
-    this.imagesService.testAddingData();
+    // this.imagesService.testAddingData();
   }
 
   openDialog(): void {

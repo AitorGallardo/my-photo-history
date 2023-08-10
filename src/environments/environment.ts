@@ -1,5 +1,6 @@
 export const environment = {
     production: false,
+    cloudinary_key:'dyp1npzkl',
     firebaseConfig: {
         apiKey: "AIzaSyAc8_LT_6mFu6d_Sr1ZQcUBEMLzXz-c5sc",
         authDomain: "my-photo-history-50357.firebaseapp.com",
