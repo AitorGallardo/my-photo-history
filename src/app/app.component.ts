@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { DefaultFUBackground, FileUploaderComponent } from './file-uploader/file-uploader.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,5 @@ import { DefaultFUBackground, FileUploaderComponent } from './file-uploader/file
 })
 export class AppComponent {
   title = 'my-photo-history';
-  image = null;
-  @ViewChild('fileUploader', { static: false }) fileUploader: FileUploaderComponent = new FileUploaderComponent();
-  fileUploaderOptions: DefaultFUBackground = new DefaultFUBackground(null, '48px');
 
 }

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef, Input } from '@angular/core';
 
 type FUProperties = string | null;
@@ -22,7 +23,10 @@ export class DefaultFUBackground {
 @Component({
   selector: 'app-file-uploader',
   templateUrl: './file-uploader.component.html',
-  styleUrls: ['./file-uploader.component.css']
+  styleUrls: ['./file-uploader.component.css'],
+  standalone: true,
+  imports: [CommonModule]
+
 })
 export class FileUploaderComponent implements OnInit {
 
