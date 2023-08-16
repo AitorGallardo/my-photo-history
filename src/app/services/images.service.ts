@@ -10,10 +10,12 @@ export class ImagesService {
   cloudinary_key = environment.cloudinary_key;
   constructor(private firestore: AngularFirestore) { }
 
-  testAddingData() {
+  async testAddingData(image:Image) {
+    const img_src = await this.fileUpload(image.image_blob)
+    image.image_src = img_src;
+    const {image_blob,...uploadingObj} = image;
     const tutorialsRef = this.firestore.collection('my-images');
-    const image = { name: 'Image1', description: 'lslallalala' };
-    tutorialsRef.add({ ...image });
+    tutorialsRef.add({ ...uploadingObj });
     
   }
 
@@ -24,12 +26,13 @@ export class ImagesService {
   }
 
   getData() {
-    this.firestore.collection('items').get()
-      .subscribe(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          console.log(doc.id, '=>', doc.data());
-        });
-      });
+    return this.firestore.collection('my-images').get();
+      // .subscribe(querySnapshot => {
+      //   console.log('entra subscribe')
+      //   querySnapshot.forEach(doc => {
+      //     console.log(doc.id, '=>', doc.data());
+      //   });
+      // });
   }
 
   fileUpload = async (imageFile: any) => {
