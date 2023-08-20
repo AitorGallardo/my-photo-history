@@ -17,6 +17,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { ImagesService } from './services/images.service';
+import { ImageCardComponent } from './image-card/image-card.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ImagesService } from './services/images.service';
     AppComponent,
     HomeComponent,
     ImageDetailsComponent,
+    ImageCardComponent,
   ],
   imports: [
     BrowserModule,

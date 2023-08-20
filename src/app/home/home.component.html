@@ -21,10 +21,11 @@
   <button mat-button color="primary" (click)="openDialog()">Upload Photo</button>
 </header>
 <div class="grid grid-cols-8 gap-4">
-  <div class="bg-blue-500 h-44 w-44" *ngFor="let box of boxes">
-    <div  class="background-image" *ngIf="box?.image_src" [style.background-image]="'url(' + box.image_src + ')'">
+  <app-image-card [imgSrc]="box.image_src" *ngFor="let box of boxes"></app-image-card>
+  <!-- <div class="" *ngFor="let box of boxes"> -->
+    <!-- <div  class="background-image" *ngIf="box?.image_src" [style.background-image]="'url(' + box.image_src + ')'"> -->
 
-  </div>
+  <!-- </div> -->
 </div>
 <!-- <div class="grid grid-cols-10 gap-4">
     <di
