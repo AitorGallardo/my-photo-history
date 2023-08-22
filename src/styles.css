@@ -18,13 +18,16 @@
   select:focus {
     box-shadow: none;
   }
-
+}
+@import "tailwindcss/components";
+@layer components {
   .tw-input:focus{
     box-shadow: none;
   }
 }
-@import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+
 
 html,
 body {
